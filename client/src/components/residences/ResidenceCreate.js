@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
+import { connect } from 'react-redux';
+import { createResidence } from '../../actions';
 
 class ResidenceCreate extends Component {
-	renderInput = ({ input, label, meta }) => {
+	renderInput = ({ input, label, type, meta }) => {
 		const errorClassName = `field ${meta.error && meta.touched ? 'error' : ''}`;
 		return (
 			<div className={errorClassName}>
 				<label>{label}</label>
-				<input {...input} autoComplete="off" />
+				<input {...input} autoComplete="off" type={type} />
 				{this.renderError(meta)}
 			</div>
 		);
@@ -23,9 +25,9 @@ class ResidenceCreate extends Component {
 		}
 	}
 
-	onSubmit(formValues) {
-		console.log(formValues);
-	}
+	onSubmit = (formValues) => {
+		this.props.createResidence(formValues);
+	};
 
 	render() {
 		return (
@@ -33,11 +35,35 @@ class ResidenceCreate extends Component {
 				onSubmit={this.props.handleSubmit(this.onSubmit)}
 				className="ui form error"
 			>
-				<Field name="title" component={this.renderInput} label="Enter Title" />
 				<Field
-					name="description"
+					name="cep"
+					type="number"
 					component={this.renderInput}
-					label="Enter Description"
+					label="Enter your CEP"
+				/>
+				<Field
+					name="houseNumber"
+					type="number"
+					component={this.renderInput}
+					label="Enter your House Number"
+				/>
+				<Field
+					name="latitude"
+					type="number"
+					component={this.renderInput}
+					label="Enter your Latitude"
+				/>
+				<Field
+					name="longitude"
+					type="number"
+					component={this.renderInput}
+					label="Enter your Longitude"
+				/>
+				<Field
+					name="residents"
+					type="number"
+					component={this.renderInput}
+					label="Enter the number of Residents"
 				/>
 				<button className="ui button primary">Submit</button>
 			</form>
@@ -48,18 +74,32 @@ class ResidenceCreate extends Component {
 const validate = (formValues) => {
 	const errors = {};
 
-	if (!formValues.title) {
-		errors.title = 'You must enter a Title';
+	if (!formValues.cep) {
+		errors.cep = 'You must enter your CEP';
 	}
 
-	if (!formValues.description) {
-		errors.description = 'You must enter a Description';
+	if (!formValues.houseNumber) {
+		errors.houseNumber = 'You must your House Number';
+	}
+
+	if (!formValues.latitude) {
+		errors.latitude = 'You must enter your Latitude';
+	}
+
+	if (!formValues.longitude) {
+		errors.longitude = 'You must enter your Longitude';
+	}
+
+	if (!formValues.residents) {
+		errors.residents = 'You must enter the number of Residents';
 	}
 
 	return errors;
 };
 
-export default reduxForm({
-	form: 'ResidenceCreate',
+const formWrapped = reduxForm({
+	form: 'residenceCreate',
 	validate,
 })(ResidenceCreate);
+
+export default connect(null, { createResidence })(formWrapped);
