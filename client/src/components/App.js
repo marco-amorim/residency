@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import Header from './Header';
 import { Route } from 'react-router-dom';
 import ResidenceList from './residences/ResidenceList';
-import ResidenceCreate from './residences/ResidenceCreate';
+import ResidenceCreate from './ResidenceForm';
 import ResidenceEdit from './residences/ResidenceEdit';
 import ResidenceDelete from './residences/ResidenceDelete';
 import ResidenceShow from './residences/ResidenceShow';

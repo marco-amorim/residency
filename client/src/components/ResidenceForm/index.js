@@ -3,13 +3,20 @@ import { reduxForm, Field } from 'redux-form';
 import { connect } from 'react-redux';
 import { createResidence } from '../../actions';
 
+import './styles.css';
+
 class ResidenceCreate extends Component {
 	renderInput = ({ input, label, type, meta }) => {
 		const errorClassName = `field ${meta.error && meta.touched ? 'error' : ''}`;
 		return (
 			<div className={errorClassName}>
 				<label>{label}</label>
-				<input {...input} autoComplete="off" type={type} />
+				<input
+					{...input}
+					autoComplete="off"
+					className="residenceInput"
+					type={type}
+				/>
 				{this.renderError(meta)}
 			</div>
 		);
