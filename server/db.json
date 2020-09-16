@@ -128,6 +128,22 @@
       "longitude": "123",
       "residents": "123",
       "id": 25
+    },
+    {
+      "cep": "88070480",
+      "houseNumber": "123",
+      "latitude": "123",
+      "longitude": "123",
+      "residents": "123",
+      "id": 26
+    },
+    {
+      "cep": "88070480",
+      "houseNumber": "1238",
+      "latitude": "12397",
+      "longitude": "1237",
+      "residents": "1293",
+      "id": 27
     }
   ]
 }
