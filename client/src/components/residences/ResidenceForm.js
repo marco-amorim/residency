@@ -1,10 +1,14 @@
 import React, { Component } from 'react';
-import { reduxForm, Field } from 'redux-form';
-import cep from 'cep-promise';
+import { reduxForm, Field, formValues } from 'redux-form';
+import { asyncValidate, validate } from './ResidenceFormValidations';
+
+import '../../assets/styles/residenceForm.css';
 
 class ResidenceForm extends Component {
 	renderInput = ({ input, label, type, meta, placeholder }) => {
-		const errorClassName = `field ${meta.error && meta.touched ? 'error' : ''}`;
+		const errorClassName = `field ${
+			meta.error && meta.touched && !meta.asyncValidating ? 'error' : ''
+		}`;
 
 		return (
 			<div className={errorClassName}>
@@ -15,28 +19,42 @@ class ResidenceForm extends Component {
 					type={type}
 					placeholder={placeholder}
 				/>
-				{label.includes('CEP') ? (
-					<div
-						id="cep-message"
-						className="ui positive message"
-						style={{ display: 'none' }}
-					>
-						<div className="header">CEP successfully validated</div>
-					</div>
-				) : null}
+				{meta.asyncValidating ? this.renderLoader() : null}
+				{label.includes('CEP') ? this.renderCepSuccess() : null}
 				{this.renderError(meta)}
 			</div>
 		);
 	};
 
-	renderError({ error, touched }) {
-		if (touched && error) {
+	renderError({ error, touched, asyncValidating }) {
+		if (touched && error && !asyncValidating) {
 			return (
 				<div className="ui error message">
 					<div className="header">{error}</div>
 				</div>
 			);
 		}
+	}
+
+	renderLoader() {
+		return (
+			<div class="spinner">
+				<div class="double-bounce1"></div>
+				<div class="double-bounce2"></div>
+			</div>
+		);
+	}
+
+	renderCepSuccess() {
+		return (
+			<div
+				id="cep-message"
+				className="ui positive message"
+				style={{ display: 'none' }}
+			>
+				<div className="header">CEP successfully found</div>
+			</div>
+		);
 	}
 
 	onSubmit = (formValues) => {
@@ -91,47 +109,8 @@ class ResidenceForm extends Component {
 	}
 }
 
-const validate = (formValues) => {
-	//TODO: improve this logic
-
-	const errors = {};
-
-	if (!formValues.cep) {
-		errors.cep = 'You must enter your CEP';
-	}
-
-	if (!formValues.houseNumber) {
-		errors.houseNumber = 'You must enter your House Number';
-	}
-
-	if (!formValues.latitude) {
-		errors.latitude = 'You must enter your Latitude';
-	}
-
-	if (!formValues.longitude) {
-		errors.longitude = 'You must enter your Longitude';
-	}
-
-	if (!formValues.residents) {
-		errors.residents = 'You must enter the number of Residents';
-	}
-
-	return errors;
-};
-
-const asyncValidate = (formValues) => {
-	return cep(formValues.cep)
-		.then((response) => {
-			if (response) {
-				document.getElementById('cep-message').style.display = null;
-			}
-		})
-		.catch(() => {
-			document.getElementById('cep-message').style.display = 'none';
-			// eslint-disable-next-line no-throw-literal
-			throw { cep: 'Your CEP was not found, make sure you typed a valid one' };
-		});
-};
+validate(formValues);
+asyncValidate(formValues);
 
 export default reduxForm({
 	form: 'residenceCreate',
