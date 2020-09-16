@@ -1,12 +1,8 @@
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
-import { connect } from 'react-redux';
-import { createResidence } from '../../actions';
 import cep from 'cep-promise';
 
-import './styles.css';
-
-class ResidenceCreate extends Component {
+class ResidenceForm extends Component {
 	renderInput = ({ input, label, type, meta, placeholder }) => {
 		const errorClassName = `field ${meta.error && meta.touched ? 'error' : ''}`;
 
@@ -44,7 +40,7 @@ class ResidenceCreate extends Component {
 	}
 
 	onSubmit = (formValues) => {
-		this.props.createResidence(formValues);
+		this.props.onSubmit(formValues);
 		formValues = {};
 	};
 
@@ -137,11 +133,9 @@ const asyncValidate = (formValues) => {
 		});
 };
 
-const formWrapped = reduxForm({
+export default reduxForm({
 	form: 'residenceCreate',
 	validate,
 	asyncValidate,
 	asyncBlurFields: ['cep'],
-})(ResidenceCreate);
-
-export default connect(null, { createResidence })(formWrapped);
+})(ResidenceForm);
