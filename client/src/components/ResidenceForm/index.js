@@ -2,14 +2,23 @@ import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 import { connect } from 'react-redux';
 import { createResidence } from '../../actions';
+import cep from 'cep-promise';
+
+import './styles.css';
 
 class ResidenceCreate extends Component {
-	renderInput = ({ input, label, type, meta }) => {
+	renderInput = ({ input, label, type, meta, placeholder }) => {
 		const errorClassName = `field ${meta.error && meta.touched ? 'error' : ''}`;
+
 		return (
 			<div className={errorClassName}>
 				<label>{label}</label>
-				<input {...input} autoComplete="off" type={type} />
+				<input
+					{...input}
+					autoComplete="off"
+					type={type}
+					placeholder={placeholder}
+				/>
 				{this.renderError(meta)}
 			</div>
 		);
@@ -40,30 +49,35 @@ class ResidenceCreate extends Component {
 					type="number"
 					component={this.renderInput}
 					label="Enter your CEP"
+					placeholder="CEP"
 				/>
 				<Field
 					name="houseNumber"
 					type="number"
 					component={this.renderInput}
 					label="Enter your House Number"
+					placeholder="House Number"
 				/>
 				<Field
 					name="latitude"
 					type="number"
 					component={this.renderInput}
 					label="Enter your Latitude"
+					placeholder="Latitude"
 				/>
 				<Field
 					name="longitude"
 					type="number"
 					component={this.renderInput}
 					label="Enter your Longitude"
+					placeholder="Longitude"
 				/>
 				<Field
 					name="residents"
 					type="number"
 					component={this.renderInput}
 					label="Enter the number of Residents"
+					placeholder="Number of Residents"
 				/>
 				<button className="ui button primary">Submit</button>
 			</form>
@@ -97,9 +111,23 @@ const validate = (formValues) => {
 	return errors;
 };
 
+const asyncValidate = (values) => {
+	return cep(values.cep)
+		.then(() => {
+			console.log('achei');
+		})
+		.catch((response) => {
+			console.log(response);
+			// eslint-disable-next-line no-throw-literal
+			throw { cep: 'Your CEP was not found, make sure you typed a valid one' };
+		});
+};
+
 const formWrapped = reduxForm({
 	form: 'residenceCreate',
 	validate,
+	asyncValidate,
+	asyncBlurFields: ['cep'],
 })(ResidenceCreate);
 
 export default connect(null, { createResidence })(formWrapped);
