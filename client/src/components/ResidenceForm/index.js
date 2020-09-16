@@ -19,6 +19,15 @@ class ResidenceCreate extends Component {
 					type={type}
 					placeholder={placeholder}
 				/>
+				{label.includes('CEP') ? (
+					<div
+						id="cep-message"
+						className="ui positive message"
+						style={{ display: 'none' }}
+					>
+						<div className="header">CEP successfully validated</div>
+					</div>
+				) : null}
 				{this.renderError(meta)}
 			</div>
 		);
@@ -36,6 +45,7 @@ class ResidenceCreate extends Component {
 
 	onSubmit = (formValues) => {
 		this.props.createResidence(formValues);
+		formValues = {};
 	};
 
 	render() {
@@ -86,6 +96,8 @@ class ResidenceCreate extends Component {
 }
 
 const validate = (formValues) => {
+	//TODO: improve this logic
+
 	const errors = {};
 
 	if (!formValues.cep) {
@@ -93,7 +105,7 @@ const validate = (formValues) => {
 	}
 
 	if (!formValues.houseNumber) {
-		errors.houseNumber = 'You must your House Number';
+		errors.houseNumber = 'You must enter your House Number';
 	}
 
 	if (!formValues.latitude) {
@@ -111,13 +123,15 @@ const validate = (formValues) => {
 	return errors;
 };
 
-const asyncValidate = (values) => {
-	return cep(values.cep)
-		.then(() => {
-			console.log('achei');
+const asyncValidate = (formValues) => {
+	return cep(formValues.cep)
+		.then((response) => {
+			if (response) {
+				document.getElementById('cep-message').style.display = null;
+			}
 		})
-		.catch((response) => {
-			console.log(response);
+		.catch(() => {
+			document.getElementById('cep-message').style.display = 'none';
 			// eslint-disable-next-line no-throw-literal
 			throw { cep: 'Your CEP was not found, make sure you typed a valid one' };
 		});
