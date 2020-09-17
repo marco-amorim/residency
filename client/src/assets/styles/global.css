@@ -1,0 +1,11 @@
+:root {
+	--color-background: #e1e1e6;
+}
+
+body {
+	background-color: var(--color-background);
+}
+
+h3 {
+	text-align: center;
+}

@@ -8,6 +8,8 @@ import ResidenceEdit from './residences/ResidenceEdit';
 import ResidenceDelete from './residences/ResidenceDelete';
 import ResidenceShow from './residences/ResidenceShow';
 
+import '../assets/styles/global.css';
+
 const App = () => {
 	return (
 		<div className="ui container">

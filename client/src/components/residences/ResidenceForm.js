@@ -69,6 +69,7 @@ class ResidenceForm extends Component {
 			<form
 				onSubmit={this.props.handleSubmit(this.onSubmit)}
 				className="ui form error"
+				id="residence-form"
 			>
 				<Field
 					name="cep"
