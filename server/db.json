@@ -7,6 +7,14 @@
       "longitude": "123",
       "residents": "123",
       "id": 1
+    },
+    {
+      "cep": "88070480",
+      "houseNumber": "123",
+      "latitude": "123",
+      "longitude": "123",
+      "residents": "123",
+      "id": 2
     }
   ]
 }

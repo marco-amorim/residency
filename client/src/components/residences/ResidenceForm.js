@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 import cep from 'cep-promise';
+import { maskInputs } from '../../util/inputMasks';
+import { validateLatitudeAndLongitude } from '../../util/formValidations';
 
 import '../../assets/styles/residenceForm.css';
 
 class ResidenceForm extends Component {
-	renderInput = ({ input, label, type, meta, placeholder }) => {
+	componentDidMount() {
+		maskInputs();
+	}
+
+	renderInput = ({ input, label, id, meta, placeholder }) => {
 		const errorClassName = `field ${
 			meta.error && meta.touched && !meta.asyncValidating ? 'error' : ''
 		}`;
@@ -16,7 +22,7 @@ class ResidenceForm extends Component {
 				<input
 					{...input}
 					autoComplete="off"
-					type={type}
+					id={id}
 					placeholder={placeholder}
 				/>
 				{meta.asyncValidating ? this.renderLoader() : null}
@@ -73,35 +79,35 @@ class ResidenceForm extends Component {
 			>
 				<Field
 					name="cep"
-					type="number"
+					id="cep"
 					component={this.renderInput}
 					label="Enter your CEP"
 					placeholder="CEP"
 				/>
 				<Field
 					name="houseNumber"
-					type="number"
+					id="houseNumber"
 					component={this.renderInput}
 					label="Enter your House Number"
 					placeholder="House Number"
 				/>
 				<Field
 					name="latitude"
-					type="number"
+					id="latitude"
 					component={this.renderInput}
 					label="Enter your Latitude"
-					placeholder="Latitude"
+					placeholder="-90 up to +90"
 				/>
 				<Field
 					name="longitude"
-					type="number"
+					id="longitude"
 					component={this.renderInput}
 					label="Enter your Longitude"
-					placeholder="Longitude"
+					placeholder="-180 up to +180"
 				/>
 				<Field
 					name="residents"
-					type="number"
+					id="residents"
 					component={this.renderInput}
 					label="Enter the number of Residents"
 					placeholder="Number of Residents"
@@ -114,8 +120,9 @@ class ResidenceForm extends Component {
 
 const validate = (formValues) => {
 	//TODO: improve this logic
-
 	const errors = {};
+
+	validateLatitudeAndLongitude(formValues, errors);
 
 	if (!formValues.cep) {
 		errors.cep = 'You must enter your CEP';
