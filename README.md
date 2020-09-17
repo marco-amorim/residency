@@ -27,5 +27,5 @@
 #### Executing the Server
 
 - Inside the **server** folder execute the command **npm install**
-- After the installation you can run **npm start** to run the client
-- The client is set to run on port 3001
+- After the installation you can run **npm start** to run the server
+- The server is set to run on port 3001
