@@ -168,6 +168,38 @@
       "longitude": "123",
       "residents": "123",
       "id": 30
+    },
+    {
+      "cep": "88070480",
+      "houseNumber": "1234141",
+      "latitude": "123124451",
+      "longitude": "12414523512",
+      "residents": "12412445",
+      "id": 31
+    },
+    {
+      "cep": "88070480",
+      "houseNumber": "1234141",
+      "latitude": "123124451",
+      "longitude": "12414523512",
+      "residents": "12412445",
+      "id": 32
+    },
+    {
+      "cep": "88070480",
+      "houseNumber": "1234141",
+      "latitude": "123124451",
+      "longitude": "12414523512",
+      "residents": "12412445",
+      "id": 33
+    },
+    {
+      "cep": "88070480",
+      "houseNumber": "1234141",
+      "latitude": "123124451",
+      "longitude": "12414523512",
+      "residents": "12412445",
+      "id": 34
     }
   ]
 }
