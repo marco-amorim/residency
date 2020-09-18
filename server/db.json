@@ -1,3 +1,28 @@
 {
-  "residences": []
+  "residences": [
+    {
+      "cep": "88070-480",
+      "houseNumber": "123",
+      "latitude": "-2",
+      "longitude": "+3",
+      "residents": "12",
+      "id": 1
+    },
+    {
+      "cep": "88070-480",
+      "houseNumber": "22",
+      "latitude": "-78",
+      "longitude": "+43",
+      "residents": "5",
+      "id": 2
+    },
+    {
+      "cep": "88070-480",
+      "houseNumber": "14",
+      "latitude": "-23",
+      "longitude": "+48",
+      "residents": "1",
+      "id": 3
+    }
+  ]
 }

@@ -8,7 +8,7 @@ const Header = () => {
 				Residences
 			</Link>
 			<div className="right menu">
-				<Link to="/" className="ui orange button">
+				<Link to="/heatmap" className="ui orange button">
 					<i className="fire icon" />
 					Map
 				</Link>

@@ -57,7 +57,7 @@
 - **_ResidenceEdit_**, responsible for editing a Residence
 - **_ResidenceDelete_**, responsible for deleting a Residence
 - **_ResidenceList_**, responsible for listing all Residences
-- **_Modal_**, reusable Modal, responsible for confirming actions
+- **_Modal_**, reusable Component, responsible for confirming actions
 - **_Header_**, responsible for the application's Header
 - **_App_**, responsible for putting all the Components together
 
