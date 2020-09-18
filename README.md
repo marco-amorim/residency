@@ -14,6 +14,8 @@
 
 - A heat map based on the residences with the most number of residents
 
+---
+
 ### How to execute the Project
 
 - First you need to clone the project from Github in this [link](https://github.com/marco-amorim/desafio-react.git)
@@ -29,6 +31,8 @@
 - Inside the **_server_** folder execute the command **`npm install`**
 - After the installation you can run **`npm start`** to run the server
 - The server is set to run on port **`3001`**
+
+---
 
 ### Project Architecture
 
