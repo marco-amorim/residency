@@ -1,8 +1,8 @@
-## React Challenge
+# React Challenge
 
-### Residence Register App with Heat Map
+## Residence Register App with Heat Map
 
-#### Data Model (Residence)
+### Data Model (Residence)
 
 - CEP
 - House Number
@@ -10,23 +10,23 @@
 - Longitude
 - Number of Residents
 
-#### Heat Map
+### Heat Map
 
 - A heat map based on the residences with the most number of residents
 
 ---
 
-### How to execute the Project
+## How to execute the Project
 
 - First you need to clone the project from Github in this [link](https://github.com/marco-amorim/desafio-react.git)
 
-#### **Executing the Client**
+### **Executing the Client**
 
 - Inside the **_client_** folder execute the command **`npm install`**
 - After the installation you can run **`npm start`** to run the client
 - The client is set to run on port **`3000`**
 
-#### **Executing the Server**
+### **Executing the Server**
 
 - Inside the **_server_** folder execute the command **`npm install`**
 - After the installation you can run **`npm start`** to run the server
@@ -34,7 +34,7 @@
 
 ---
 
-### Project Architecture
+# Project Architecture
 
 - Separated each REST operation as a module for the Residences CRUD
 - Used Redux to manage states all over the application
