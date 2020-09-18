@@ -41,9 +41,10 @@
 - Used Redux-Form to make it easier to handle form values and validations
 - Used Redux-Thunk, a middleware to create asynchronous actions with Redux
 - Used React-Router for navigation inside the application
+- Created [history.js](https://github.com/marco-amorim/desafio-react/blob/master/client/src/history.js) for programmatic navigation inside the application
+- Since I'm using React-Router for navigation, all components are isolated (fetch their own data)
 - Used Lodash to make it easier to handle Object based Reducers
 - Used JQuery for input masks on form
 - Used Axios for HTTP requests
 - Used Cep-Promise for CEP validation on multiple platforms
-- Created history.js for programmatic navigation inside the application
 - You can check all the libraries I used with their versions in [here](https://github.com/marco-amorim/desafio-react/blob/master/client/package.json)

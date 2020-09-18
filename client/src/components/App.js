@@ -16,7 +16,7 @@ const App = () => {
 				<Header />
 				<Route path="/" exact component={ResidenceList} />
 				<Route path="/residences/new" exact component={ResidenceCreate} />
-				<Route path="/residences/edit" exact component={ResidenceEdit} />
+				<Route path="/residences/edit/:id" exact component={ResidenceEdit} />
 				<Route path="/residences/delete" exact component={ResidenceDelete} />
 			</Router>
 		</div>
