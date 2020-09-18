@@ -11,8 +11,9 @@ const Header = () => {
 				New Residence
 			</Link>
 			<div className="right menu">
-				<Link to="/" className="item">
-					Heat Map
+				<Link to="/" className="ui primary button">
+					<i className="fire icon" />
+					Map
 				</Link>
 			</div>
 		</div>

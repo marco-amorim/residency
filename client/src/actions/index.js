@@ -7,7 +7,7 @@ import {
 } from '../actions/types';
 
 export const createResidence = (formValues) => async (dispatch) => {
-	const response = await residences.post('/residences', { ...formValues });
+	const response = await residences.post('/residences', formValues);
 
 	dispatch({ type: CREATE_RESIDENCE, payload: response.data });
 };

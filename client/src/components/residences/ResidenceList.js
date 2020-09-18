@@ -12,7 +12,6 @@ class ResidenceList extends React.Component {
 			return (
 				<div className="item" key={residence.id}>
 					<i className="large middle aligned icon home" />
-					<div className="content">{residence.id}</div>
 					<div className="description">CEP: {residence.cep}</div>
 					<div className="description">Number: {residence.houseNumber}</div>
 					<div className="description">Residents: {residence.residents}</div>
