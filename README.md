@@ -67,4 +67,10 @@
 - **_editResidence_**, **`PUT`** method to update a Residence
 - **_deleteResidence_**, **`DELETE`** method to remove a Residence
 
+## Reducers
+
+- **_residenceReducer_**, responsible for calling all Actions passing the state Object
+- **_formReducer_**, reducer automatically received from the Redux-Form library
+- **_index_**, responsible for combining all reducers with combineReducers from Redux
+
 ---

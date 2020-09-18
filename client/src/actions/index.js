@@ -31,6 +31,7 @@ export const editResidence = (id, formValues) => async (dispatch) => {
 	const response = await residences.put(`/residences/${id}`, formValues);
 
 	dispatch({ type: EDIT_RESIDENCE, payload: response.data });
+	history.push('/');
 };
 
 export const deleteResidence = (id) => async (dispatch) => {
