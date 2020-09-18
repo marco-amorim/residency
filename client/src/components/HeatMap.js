@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
 
 class HeatMap extends Component {
-  render() {
-    return (
-      <div>
-        Heat Map!
-      </div>
-    );
-  }
+	render() {
+		return <h2>Heat Map</h2>;
+	}
 }
 
 export default HeatMap;

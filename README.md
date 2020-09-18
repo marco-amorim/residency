@@ -76,3 +76,19 @@
 - **_index_**, responsible for combining all reducers with combineReducers from Redux
 
 ---
+
+## Self Evaluation
+
+### Strong Points
+
+- All data inside the application is handled with Redux, making it easier to retrieve and use states on all components
+- Followed the REST convention for API calls to the backend, making it easier to understand what each API call does
+- The Form values and validations are well managed with Redux-Form, making it easier to work with all over the application
+- Reusable components such as the residenceForm and Modal
+- The chosen library for CEP finding searches on multiple platforms for validation, making the application faster
+- Created a complete CRUD for Residences (Create, Read, Update and Delete)
+
+### Points to Improve
+
+- The whole styling of the Application
+- Logic inside the validation methods at [residenceForm.js](https://github.com/marco-amorim/desafio-react/blob/master/client/src/components/residences/ResidenceForm.js) and [formValidations.js](https://github.com/marco-amorim/desafio-react/blob/master/client/src/util/formValidations.js)

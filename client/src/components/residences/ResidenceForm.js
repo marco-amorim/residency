@@ -119,7 +119,6 @@ class ResidenceForm extends Component {
 }
 
 const validate = (formValues) => {
-	//TODO: improve this logic
 	const errors = {};
 
 	validateLatitudeAndLongitude(formValues, errors);
