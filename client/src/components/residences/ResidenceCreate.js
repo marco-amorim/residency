@@ -11,7 +11,7 @@ class ResidenceCreate extends Component {
 	render() {
 		return (
 			<div>
-				<h3>Please, register your new Residence below</h3>
+				<h2>Please, register your new Residence below</h2>
 				<ResidenceForm onSubmit={this.onSubmit} />
 			</div>
 		);

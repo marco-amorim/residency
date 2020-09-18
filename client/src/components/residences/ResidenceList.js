@@ -1,12 +1,38 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { fetchResidences } from '../../actions';
 
-const ResidenceList = () => {
-	return (
-		<div>
-			<h3>Registered Residences</h3>
-			<div>Residence List</div>
-		</div>
-	);
+class ResidenceList extends React.Component {
+	componentDidMount() {
+		this.props.fetchResidences();
+	}
+
+	renderList() {
+		return this.props.residences.map((residence) => {
+			return (
+				<div className="item" key={residence.id}>
+					<i className="large middle aligned icon home" />
+					<div className="content">{residence.id}</div>
+					<div className="description">CEP: {residence.cep}</div>
+					<div className="description">Number: {residence.houseNumber}</div>
+					<div className="description">Residents: {residence.residents}</div>
+				</div>
+			);
+		});
+	}
+
+	render() {
+		return (
+			<div>
+				<h2>Residences List</h2>
+				<div className="ui celled list">{this.renderList()}</div>
+			</div>
+		);
+	}
+}
+
+const mapStateToProps = (state) => {
+	return { residences: Object.values(state.residences) };
 };
 
-export default ResidenceList;
+export default connect(mapStateToProps, { fetchResidences })(ResidenceList);

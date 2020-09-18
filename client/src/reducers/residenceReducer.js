@@ -9,6 +9,9 @@ import {
 
 export default (state = {}, action) => {
 	switch (action.type) {
+		case FETCH_RESIDENCES:
+			return { ...state, ..._.mapKeys(action.payload, 'id') };
+
 		case CREATE_RESIDENCE:
 			return { ...state, [action.payload.id]: action.payload };
 
