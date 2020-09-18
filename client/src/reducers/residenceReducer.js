@@ -3,7 +3,6 @@ import {
 	CREATE_RESIDENCE,
 	DELETE_RESIDENCE,
 	EDIT_RESIDENCE,
-	FETCH_RESIDENCE,
 	FETCH_RESIDENCES,
 } from '../actions/types';
 
@@ -13,9 +12,6 @@ export default (state = {}, action) => {
 			return { ...state, ..._.mapKeys(action.payload, 'id') };
 
 		case CREATE_RESIDENCE:
-			return { ...state, [action.payload.id]: action.payload };
-
-		case FETCH_RESIDENCE:
 			return { ...state, [action.payload.id]: action.payload };
 
 		case EDIT_RESIDENCE:
