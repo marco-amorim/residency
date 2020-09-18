@@ -45,4 +45,5 @@
 - Used JQuery for input masks on form
 - Used Axios for HTTP requests
 - Used Cep-Promise for CEP validation on multiple platforms
+- Created history.js for programmatic navigation inside the application
 - You can check all the libraries I used with their versions in [here](https://github.com/marco-amorim/desafio-react/blob/master/client/package.json)
