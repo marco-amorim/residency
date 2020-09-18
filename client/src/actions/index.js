@@ -38,4 +38,5 @@ export const deleteResidence = (id) => async (dispatch) => {
 	await residences.delete(`/residences/${id}`);
 
 	dispatch({ type: DELETE_RESIDENCE, payload: id });
+	history.push('/');
 };

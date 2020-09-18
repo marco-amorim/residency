@@ -17,7 +17,10 @@ class ResidenceList extends React.Component {
 				>
 					Edit
 				</Link>
-				<Link to="/" className="ui button negative">
+				<Link
+					to={`/residences/delete/${residence.id}`}
+					className="ui button negative"
+				>
 					Delete
 				</Link>
 			</div>

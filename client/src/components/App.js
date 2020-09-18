@@ -17,7 +17,11 @@ const App = () => {
 				<Route path="/" exact component={ResidenceList} />
 				<Route path="/residences/new" exact component={ResidenceCreate} />
 				<Route path="/residences/edit/:id" exact component={ResidenceEdit} />
-				<Route path="/residences/delete" exact component={ResidenceDelete} />
+				<Route
+					path="/residences/delete/:id"
+					exact
+					component={ResidenceDelete}
+				/>
 			</Router>
 		</div>
 	);

@@ -34,7 +34,7 @@
 
 ---
 
-# Project Architecture
+## Project Architecture
 
 - Separated each REST operation as a module for the Residences CRUD
 - Used Redux to manage states all over the application
@@ -47,19 +47,21 @@
 - Used JQuery for input masks on form
 - Used Axios for HTTP requests
 - Used Cep-Promise for CEP validation on multiple platforms
+- Used Portal from React-DOM to create the Modal component
 - You can check all the libraries I used with their versions in [here](https://github.com/marco-amorim/desafio-react/blob/master/client/package.json)
 
-## Components
+### Components
 
-- **_ResidenceForm_**, used in **_ResidenceCreate_** and **_ResidenceEdit_** Components
+- **_ResidenceForm_**, reusable Form used in **_ResidenceCreate_** and **_ResidenceEdit_** Components
 - **_ResidenceCreate_**, responsible for creating a Residence
 - **_ResidenceEdit_**, responsible for editing a Residence
 - **_ResidenceDelete_**, responsible for deleting a Residence
 - **_ResidenceList_**, responsible for listing all Residences
+- **_Modal_**, reusable Modal, responsible for confirming actions
 - **_Header_**, responsible for the application's Header
-- **_App_**, responsible for putting all the components together
+- **_App_**, responsible for putting all the Components together
 
-## Actions
+### Actions
 
 - **_createResidence_**, **`POST`** method to create Residence
 - **_fetchResidences_**, **`GET`** method to fetch all Residences
@@ -67,7 +69,7 @@
 - **_editResidence_**, **`PUT`** method to update a Residence
 - **_deleteResidence_**, **`DELETE`** method to remove a Residence
 
-## Reducers
+### Reducers
 
 - **_residenceReducer_**, responsible for calling all Actions passing the state Object
 - **_formReducer_**, reducer automatically received from the Redux-Form library
