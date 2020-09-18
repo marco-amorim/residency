@@ -7,13 +7,10 @@ const Header = () => {
 			<Link to="/" className="item">
 				Residences
 			</Link>
-			<Link to="/residences/new" className="item">
-				New Residence
-			</Link>
 			<div className="right menu">
 				<Link to="/" className="ui orange button">
-					{/* <i className="fire icon" /> */}
-					Heat Map
+					<i className="fire icon" />
+					Map
 				</Link>
 			</div>
 		</div>

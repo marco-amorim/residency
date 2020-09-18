@@ -5,6 +5,7 @@ import {
 	DELETE_RESIDENCE,
 	EDIT_RESIDENCE,
 	FETCH_RESIDENCES,
+	FETCH_RESIDENCE,
 } from '../actions/types';
 
 export const createResidence = (formValues) => async (dispatch) => {
@@ -18,6 +19,12 @@ export const fetchResidences = () => async (dispatch) => {
 	const response = await residences.get('/residences');
 
 	dispatch({ type: FETCH_RESIDENCES, payload: response.data });
+};
+
+export const fetchResidence = (id) => async (dispatch) => {
+	const response = await residences.get(`/residences/${id}`);
+
+	dispatch({ type: FETCH_RESIDENCE, payload: response.data });
 };
 
 export const editResidence = (id, formValues) => async (dispatch) => {

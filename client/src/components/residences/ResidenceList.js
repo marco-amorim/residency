@@ -44,6 +44,9 @@ class ResidenceList extends React.Component {
 		return (
 			<div>
 				<h2>Residences</h2>
+				<Link to="/residences/new" className="ui button primary">
+					New Residence
+				</Link>
 				<div className="ui celled list">{this.renderList()}</div>
 			</div>
 		);

@@ -48,3 +48,23 @@
 - Used Axios for HTTP requests
 - Used Cep-Promise for CEP validation on multiple platforms
 - You can check all the libraries I used with their versions in [here](https://github.com/marco-amorim/desafio-react/blob/master/client/package.json)
+
+## Components
+
+- **_ResidenceForm_**, used in **_ResidenceCreate_** and **_ResidenceEdit_** Components
+- **_ResidenceCreate_**, responsible for creating a Residence
+- **_ResidenceEdit_**, responsible for editing a Residence
+- **_ResidenceDelete_**, responsible for deleting a Residence
+- **_ResidenceList_**, responsible for listing all Residences
+- **_Header_**, responsible for the application's Header
+- **_App_**, responsible for putting all the components together
+
+## Actions
+
+- **_createResidence_**, **`POST`** method to create Residence
+- **_fetchResidences_**, **`GET`** method to fetch all Residences
+- **_fetchResidence_**, **`GET`** method to fetch a single Residence
+- **_editResidence_**, **`PUT`** method to update a Residence
+- **_deleteResidence_**, **`DELETE`** method to remove a Residence
+
+---

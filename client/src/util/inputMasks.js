@@ -24,7 +24,16 @@ export const maskInputs = () => {
 		},
 	});
 
-	$('#residents, #houseNumber').mask('XXXXX', {
+	$('#houseNumber').mask('XXXXXX', {
+		translation: {
+			X: {
+				pattern: /[0-9]/,
+				optional: false,
+			},
+		},
+	});
+
+	$('#residents').mask('XX', {
 		translation: {
 			X: {
 				pattern: /[0-9]/,
