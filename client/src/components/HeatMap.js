@@ -20,7 +20,7 @@ class HeatMap extends Component {
 			return (
 				<Circle
 					opacity={0.1}
-					radius={20}
+					radius={35}
 					center={[residence.latitude, residence.longitude]}
 				>
 					<Popup>
