@@ -50,7 +50,7 @@
 - Used Portal from **`react-dom`** to create the Modal component
 - Used **`react-leaflet`** for Map in HeatMap component
 - Used **`react-leaflet-heatmap-layer`** for heat overlay in HeatMap component
-- You can check all the libraries I used with their versions in [here](https://github.com/marco-amorim/desafio-react/network/dependencies)
+- You can check all the libraries I've used with their versions in [here](https://github.com/marco-amorim/desafio-react/network/dependencies)
 
 ### Components
 
@@ -74,7 +74,7 @@
 
 ### Reducers
 
-- **_residenceReducer_**, responsible for calling all Actions passing the state Object
+- **_residenceReducer_**, responsible for calling all actions passing the state Object
 - **_formReducer_**, reducer automatically received from the **`redux-form`** library
 - **_index_**, responsible for combining all reducers with combineReducers from **`redux`**
 
@@ -85,7 +85,7 @@
 ### Strong Points
 
 - Managed state containers with **`redux`**, making it easier to control data all over the application with actions and reducers
-- Followed the RESTful conventions for HTTP requests to the backend, making it easier to understand what each one does
+- Followed the RESTful conventions for HTTP requests to the backend, making it easier to understand what each request does
 - The Form values and validations are well managed with **`redux-form`**, making it easier to work with and understand
 - Reusable components such as the ResidenceForm and Modal
 - The chosen library for CEP finding searches on multiple platforms for validation, making the application faster and more reliable
