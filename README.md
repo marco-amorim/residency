@@ -74,8 +74,8 @@
 ### Reducers
 
 - **_residenceReducer_**, responsible for calling all Actions passing the state Object
-- **_formReducer_**, reducer automatically received from the Redux-Form library
-- **_index_**, responsible for combining all reducers with combineReducers from Redux
+- **_formReducer_**, reducer automatically received from the **`redux-form`** library
+- **_index_**, responsible for combining all reducers with combineReducers from **`redux`**
 
 ---
 
@@ -85,9 +85,9 @@
 
 - All data inside the application is handled with Redux, making it easier to retrieve and use states on all components
 - Followed the REST convention for API calls to the backend, making it easier to understand what each API call does
-- The Form values and validations are well managed with Redux-Form, making it easier to work with all over the application
-- Reusable components such as the residenceForm and Modal
-- The chosen library for CEP finding searches on multiple platforms for validation, making the application faster
+- The Form values and validations are well managed with **`redux-form`**, making it easier to work with all over the application
+- Reusable components such as the ResidenceForm and Modal
+- The chosen library for CEP finding searches on multiple platforms for validation, making the application faster and more reliable
 - Created a complete CRUD for Residences (Create, Read, Update and Delete)
 
 ### Points to Improve
@@ -95,4 +95,4 @@
 - The whole styling of the Application
 - Find out a way to get the Latitude and Longitude automatically with CEP + House Number
 - Warning on console with HeatMap component, on my researches it seems to be a problem with the **`react-leaflet-heatmap-layer`** library, and it shows only on development servers, check the source [here](https://stackoverflow.com/questions/58924617/componentwillreceiveprops-has-been-renamed)
-- Logic inside the validation methods at [residenceForm.js](https://github.com/marco-amorim/desafio-react/blob/master/client/src/components/residences/ResidenceForm.js) and [formValidations.js](https://github.com/marco-amorim/desafio-react/blob/master/client/src/util/formValidations.js)
+- Logic inside the validation methods at [ResidenceForm.js](https://github.com/marco-amorim/desafio-react/blob/master/client/src/components/residences/ResidenceForm.js) and [formValidations.js](https://github.com/marco-amorim/desafio-react/blob/master/client/src/util/formValidations.js)
