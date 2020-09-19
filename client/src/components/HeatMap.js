@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Map, TileLayer } from 'react-leaflet';
+import { Map, TileLayer, Popup, Circle } from 'react-leaflet';
 import HeatmapLayer from 'react-leaflet-heatmap-layer';
 import { fetchResidences } from '../actions';
 
@@ -12,6 +12,26 @@ class HeatMap extends Component {
 	addressPoints() {
 		return this.props.residences.map((residence) => {
 			return [residence.latitude, residence.longitude, residence.residents];
+		});
+	}
+
+	renderPopups() {
+		return this.props.residences.map((residence) => {
+			return (
+				<Circle
+					opacity={0.1}
+					radius={20}
+					center={[residence.latitude, residence.longitude]}
+				>
+					<Popup>
+						CEP: {residence.cep} <br />
+						House Number: {residence.houseNumber} <br />
+						Residents: {residence.residents} <br />
+						Latitude: {residence.latitude} <br />
+						Longitude: {residence.longitude} <br />
+					</Popup>
+				</Circle>
+			);
 		});
 	}
 
@@ -33,6 +53,7 @@ class HeatMap extends Component {
 						url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 						attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 					/>
+					{this.renderPopups()}
 				</Map>
 			</React.Fragment>
 		);
