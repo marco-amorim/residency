@@ -1,3 +1,244 @@
 {
-  "residences": []
+  "residences": [
+    {
+      "cep": "88025-090",
+      "houseNumber": "670",
+      "latitude": "-27.5804698",
+      "longitude": "-48.5397452",
+      "residents": "5",
+      "id": 1
+    },
+    {
+      "longitude": "-48.534050",
+      "latitude": "-27.575188",
+      "cep": "88025-300",
+      "houseNumber": "153",
+      "residents": "2",
+      "id": 2
+    },
+    {
+      "latitude": "-27.589830",
+      "longitude": "-48.573855",
+      "cep": "88075-220",
+      "houseNumber": "24",
+      "residents": "8",
+      "id": 3
+    },
+    {
+      "latitude": "-27.592607",
+      "longitude": "-48.575494",
+      "cep": "88070-001",
+      "houseNumber": "494",
+      "residents": "4",
+      "id": 4
+    },
+    {
+      "latitude": "-27.594824",
+      "longitude": "-48.527013",
+      "cep": "88040-470",
+      "houseNumber": "68",
+      "residents": "6",
+      "id": 5
+    },
+    {
+      "latitude": "-27.594487",
+      "longitude": "-48.548537",
+      "cep": "88015-050",
+      "houseNumber": "40",
+      "residents": "10",
+      "id": 6
+    },
+    {
+      "latitude": "-27.573679",
+      "longitude": "-48.531068",
+      "cep": "88010-400",
+      "houseNumber": "65",
+      "residents": "6",
+      "id": 7
+    },
+    {
+      "latitude": "-27.589105",
+      "longitude": "-48.545805",
+      "cep": "88015-370",
+      "houseNumber": "22",
+      "residents": "15",
+      "id": 8
+    },
+    {
+      "latitude": "-27.592014",
+      "longitude": "-48.558329",
+      "houseNumber": "61",
+      "cep": "88015-640",
+      "residents": "22",
+      "id": 9
+    },
+    {
+      "latitude": "-27.587885",
+      "longitude": "-48.554542",
+      "cep": "88015-601",
+      "houseNumber": "1405",
+      "residents": "4",
+      "id": 10
+    },
+    {
+      "latitude": "-27.589898",
+      "longitude": "-48.534436",
+      "houseNumber": "1570",
+      "cep": "88020-420",
+      "residents": "25",
+      "id": 11
+    },
+    {
+      "latitude": "-27.595345",
+      "longitude": "-48.542239",
+      "cep": "88020-400",
+      "houseNumber": "322",
+      "residents": "6",
+      "id": 12
+    },
+    {
+      "latitude": "-27.602308",
+      "longitude": "-48.549802",
+      "cep": "88020-001",
+      "houseNumber": "59",
+      "residents": "7",
+      "id": 13
+    },
+    {
+      "latitude": "-27.604663",
+      "longitude": "-48.576971",
+      "houseNumber": "740",
+      "cep": "88080-000",
+      "residents": "5",
+      "id": 14
+    },
+    {
+      "latitude": "-27.601154",
+      "longitude": "-48.587746",
+      "cep": "88080-420",
+      "houseNumber": "376",
+      "residents": "13",
+      "id": 15
+    },
+    {
+      "latitude": "-27.598518",
+      "longitude": "-48.577501",
+      "cep": "88080-180",
+      "houseNumber": "215",
+      "residents": "25",
+      "id": 16
+    },
+    {
+      "latitude": "-27.594377",
+      "longitude": "-48.569249",
+      "houseNumber": "210",
+      "cep": "88075-010",
+      "residents": "9",
+      "id": 17
+    },
+    {
+      "latitude": "-27.592588",
+      "longitude": "-48.593107",
+      "cep": "88090-061",
+      "houseNumber": "1751",
+      "residents": "8",
+      "id": 18
+    },
+    {
+      "latitude": "-27.588075",
+      "longitude": "-48.595784",
+      "cep": "88090-301",
+      "houseNumber": "101",
+      "residents": "28",
+      "id": 19
+    },
+    {
+      "latitude": "-27.577260",
+      "longitude": "-48.586601",
+      "cep": "88075-542",
+      "houseNumber": "321",
+      "residents": "33",
+      "id": 20
+    },
+    {
+      "latitude": "-27.590419",
+      "longitude": "-48.584572",
+      "cep": "88070-650",
+      "houseNumber": "852",
+      "residents": "16",
+      "id": 21
+    },
+    {
+      "latitude": "-27.597252",
+      "longitude": "-48.553564",
+      "houseNumber": "315",
+      "cep": "88010-200",
+      "residents": "26",
+      "id": 22
+    },
+    {
+      "latitude": "-27.574566",
+      "longitude": "-48.538169",
+      "cep": "88025-301",
+      "houseNumber": "525",
+      "residents": "38",
+      "id": 23
+    },
+    {
+      "latitude": "-27.602092",
+      "longitude": "-48.508752",
+      "cep": "88037-065",
+      "houseNumber": "94",
+      "residents": "31",
+      "id": 24
+    },
+    {
+      "latitude": "-27.610433",
+      "longitude": "-48.523841",
+      "houseNumber": "157",
+      "cep": "88040-040",
+      "residents": "11",
+      "id": 25
+    },
+    {
+      "latitude": "-27.603986",
+      "longitude": "-48.516801",
+      "cep": "88040-330",
+      "houseNumber": "25",
+      "residents": "6",
+      "id": 26
+    },
+    {
+      "latitude": "-27.583457",
+      "longitude": "-48.544171",
+      "cep": "88025-201",
+      "houseNumber": "137",
+      "residents": "15",
+      "id": 27
+    },
+    {
+      "latitude": "-27.608114",
+      "longitude": "-48.544089",
+      "cep": "88020-250",
+      "houseNumber": "350",
+      "residents": "18",
+      "id": 28
+    },
+    {
+      "latitude": "-27.603163",
+      "longitude": "-48.527370",
+      "cep": "88040-600",
+      "houseNumber": "876",
+      "residents": "21",
+      "id": 29
+    },
+    {
+      "latitude": "-27.579199",
+      "longitude": "-48.576793",
+      "houseNumber": "263",
+      "cep": "88075-220",
+      "residents": "14",
+      "id": 30
+    }
+  ]
 }
