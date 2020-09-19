@@ -48,7 +48,7 @@
 - Used **`axios`** for HTTP requests
 - Used **`cep-promise`** for CEP validation on multiple platforms
 - Used Portal from **`react-dom`** to create the Modal component
-- Used **`react-reaflet`** for Map in HeatMap component
+- Used **`react-leaflet`** for Map in HeatMap component
 - Used **`react-leaflet-heatmap-layer`** for heat overlay in HeatMap component
 - You can check all the libraries I used with their versions in [here](https://github.com/marco-amorim/desafio-react/blob/master/client/package.json)
 
