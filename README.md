@@ -83,7 +83,7 @@
 
 ### Strong Points
 
-- All data inside the application is handled with **`redux`**, making it easier to retrieve and use data on all components
+- All data inside the application is handled with **`redux`**, making it easier to retrieve and use it on all components
 - Followed the REST convention for API calls to the backend, making it easier to understand what each API call does
 - The Form values and validations are well managed with **`redux-form`**, making it easier to work with all over the application
 - Reusable components such as the ResidenceForm and Modal
