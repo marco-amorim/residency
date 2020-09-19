@@ -83,7 +83,7 @@
 
 ### Strong Points
 
-- All data inside the application is handled with Redux, making it easier to retrieve and use states on all components
+- All data inside the application is handled with **`redux`**, making it easier to retrieve and use data on all components
 - Followed the REST convention for API calls to the backend, making it easier to understand what each API call does
 - The Form values and validations are well managed with **`redux-form`**, making it easier to work with all over the application
 - Reusable components such as the ResidenceForm and Modal
@@ -92,7 +92,7 @@
 
 ### Points to Improve
 
-- The whole styling of the Application
-- Find out a way to get the Latitude and Longitude automatically with CEP + House Number
+- The whole styling of the application
+- Find out if it's possible to get the Latitude and Longitude automatically with CEP + House Number
 - Warning on console with HeatMap component, on my researches it seems to be a problem with the **`react-leaflet-heatmap-layer`** library, and it shows only on development servers, check the source [here](https://stackoverflow.com/questions/58924617/componentwillreceiveprops-has-been-renamed)
 - Logic inside the validation methods at [ResidenceForm.js](https://github.com/marco-amorim/desafio-react/blob/master/client/src/components/residences/ResidenceForm.js) and [formValidations.js](https://github.com/marco-amorim/desafio-react/blob/master/client/src/util/formValidations.js)
