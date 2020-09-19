@@ -37,17 +37,19 @@
 ## Project Architecture
 
 - Separated each REST operation as a module for the Residences CRUD
-- Used Redux to manage states all over the application
-- Used Redux-Form to make it easier to handle form values and validations
-- Used Redux-Thunk, a middleware to create asynchronous actions with Redux
-- Used React-Router for navigation inside the application
+- Used **`redux`** to manage states all over the application
+- Used **`redux-form`** to make it easier to handle form values and validations
+- Used **`redux-thunk`**, a middleware to create asynchronous actions with Redux
+- Used **`react-router`** for navigation inside the application
+- Since I'm using **`react-router`** for navigation, all components are isolated (fetch their own data)
 - Created [history.js](https://github.com/marco-amorim/desafio-react/blob/master/client/src/history.js) for programmatic navigation inside the application
-- Since I'm using React-Router for navigation, all components are isolated (fetch their own data)
-- Used Lodash to make it easier to handle Object based Reducers
-- Used JQuery for input masks on form
-- Used Axios for HTTP requests
-- Used Cep-Promise for CEP validation on multiple platforms
-- Used Portal from React-DOM to create the Modal component
+- Used **`lodash`** to make it easier to handle Object based Reducers
+- Used **`jQuery`** for input masks on form
+- Used **`axios`** for HTTP requests
+- Used **`cep-promise`** for CEP validation on multiple platforms
+- Used Portal from **`react-dom`** to create the Modal component
+- Used **`react-reaflet`** for Map in HeatMap component
+- Used **`react-leaflet-heatmap-layer`** for heat overlay in HeatMap component
 - You can check all the libraries I used with their versions in [here](https://github.com/marco-amorim/desafio-react/blob/master/client/package.json)
 
 ### Components
@@ -91,4 +93,6 @@
 ### Points to Improve
 
 - The whole styling of the Application
+- Find out a way to get the Latitude and Longitude automatically with CEP + House Number
+- Warning on console with HeatMap component, on my researches it seems to be a problem with the **`react-leaflet-heatmap-layer`** library, and it shows only on development servers, check the source [here](https://stackoverflow.com/questions/58924617/componentwillreceiveprops-has-been-renamed)
 - Logic inside the validation methods at [residenceForm.js](https://github.com/marco-amorim/desafio-react/blob/master/client/src/components/residences/ResidenceForm.js) and [formValidations.js](https://github.com/marco-amorim/desafio-react/blob/master/client/src/util/formValidations.js)
