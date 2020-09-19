@@ -18,7 +18,7 @@
 
 ## How to execute the Project
 
-- First you need to clone the project from Github in this [link](https://github.com/marco-amorim/desafio-react.git)
+- First you need to clone this repository with the command **`git clone`**
 
 ### **Executing the Client**
 
@@ -37,9 +37,9 @@
 ## Project Architecture
 
 - Separated each REST operation as a module for the Residences CRUD
-- Used **`redux`** to manage states all over the application
+- Used **`redux`** to manage state containers all over the application
 - Used **`redux-form`** to make it easier to handle form values and validations
-- Used **`redux-thunk`**, a middleware to create asynchronous actions with Redux
+- Used **`redux-thunk`**, a middleware to create asynchronous actions with **`redux`**
 - Used **`react-router`** for navigation inside the application
 - Since I'm using **`react-router`** for navigation, all components are isolated (fetch their own data)
 - Created [history.js](https://github.com/marco-amorim/desafio-react/blob/master/client/src/history.js) for programmatic navigation inside the application
@@ -59,6 +59,7 @@
 - **_ResidenceEdit_**, responsible for editing a Residence
 - **_ResidenceDelete_**, responsible for deleting a Residence
 - **_ResidenceList_**, responsible for listing all Residences
+- **_HeatMap_**, responsible for showing the Heat Map based on the number of residents
 - **_Modal_**, reusable Component, responsible for confirming actions
 - **_Header_**, responsible for the application's Header
 - **_App_**, responsible for putting all the Components together
@@ -83,9 +84,9 @@
 
 ### Strong Points
 
-- All data inside the application is handled with **`redux`**, making it easier to retrieve and use it on all components
-- Followed the REST convention for API calls to the backend, making it easier to understand what each API call does
-- The Form values and validations are well managed with **`redux-form`**, making it easier to work with all over the application
+- Managed state containers with **`redux`**, making it easier to control data all over the application with actions and reducers
+- Followed the RESTful conventions for HTTP requests to the backend, making it easier to understand what each one does
+- The Form values and validations are well managed with **`redux-form`**, making it easier to work with and understand
 - Reusable components such as the ResidenceForm and Modal
 - The chosen library for CEP finding searches on multiple platforms for validation, making the application faster and more reliable
 - Created a complete CRUD for Residences (Create, Read, Update and Delete)
