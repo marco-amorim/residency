@@ -94,6 +94,8 @@
 ### Points to Improve
 
 - The whole styling of the application
-- Find out if it's possible to get the Latitude and Longitude automatically with CEP + House Number
-- Warning on console with HeatMap component, on my researches it seems to be a problem with the **`react-leaflet-heatmap-layer`** library, and it shows only on development servers, check the source [here](https://stackoverflow.com/questions/58924617/componentwillreceiveprops-has-been-renamed)
+- Include Pagination in **_ResidenceList_** component
+- Make Latitude and Longitude inputs more user friendly in **_ResidenceForm_** component
+- Find out if there is a way to get the Latitude and Longitude automatically with CEP + House Number
+- Warning on console with **_HeatMap_** component, on my researches it seems to be a problem with the **`react-leaflet-heatmap-layer`** library, and it shows only on development servers, check the source [here](https://stackoverflow.com/questions/58924617/componentwillreceiveprops-has-been-renamed)
 - Logic inside the validation methods at [ResidenceForm.js](https://github.com/marco-amorim/desafio-react/blob/master/client/src/components/residences/ResidenceForm.js) and [formValidations.js](https://github.com/marco-amorim/desafio-react/blob/master/client/src/util/formValidations.js)
