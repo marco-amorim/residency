@@ -87,14 +87,14 @@
 - Managed state containers with **`redux`**, making it easier to control data all over the application with actions and reducers
 - Followed the RESTful conventions for HTTP requests to the backend, making it easier to understand what each request does
 - The Form values and validations are well managed with **`redux-form`**, making it easier to work with and understand
-- Reusable components such as the ResidenceForm and Modal
+- Reusable components such as the **_ResidenceForm_** and **_Modal_**
 - The chosen library for CEP finding searches on multiple platforms for validation, making the application faster and more reliable
 - Created a complete CRUD for Residences (Create, Read, Update and Delete)
 
 ### Points to Improve
 
 - The whole styling of the application
-- Include Pagination in **_ResidenceList_** component
+- Include pagination in **_ResidenceList_** component
 - Make Latitude and Longitude inputs more user friendly in **_ResidenceForm_** component
 - Find out if there is a way to get the Latitude and Longitude automatically with CEP + House Number
 - Warning on console with **_HeatMap_** component, on my researches it seems to be a problem with the **`react-leaflet-heatmap-layer`** library, and it shows only on development servers, check the source [here](https://stackoverflow.com/questions/58924617/componentwillreceiveprops-has-been-renamed)
