@@ -19,6 +19,7 @@ class HeatMap extends Component {
 		return this.props.residences.map((residence) => {
 			return (
 				<Circle
+					key={residence.id}
 					opacity={0.1}
 					radius={35}
 					center={[residence.latitude, residence.longitude]}
