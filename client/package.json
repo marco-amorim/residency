@@ -11,7 +11,7 @@
     "jquery": "^3.5.1",
     "jquery-mask-plugin": "^1.14.16",
     "leaflet": "^1.7.1",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-leaflet": "^2.7.0",
